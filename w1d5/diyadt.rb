@@ -66,4 +66,8 @@ class Map
   def remove(key)
     @map.reject! { |pair| pair[0] == key }
   end
+
+  def show
+    @map
+  end
 end
