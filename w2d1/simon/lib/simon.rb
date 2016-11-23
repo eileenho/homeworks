@@ -71,6 +71,6 @@ class Simon
   end
 end
 
-__FILE__==$simon
-game = Simon.new
-game.play
+# __FILE__==$simon
+# game = Simon.new
+# game.play
