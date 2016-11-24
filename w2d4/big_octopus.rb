@@ -40,3 +40,24 @@ def clever_longest_fish(fish_array)
   end
   longest
 end
+
+tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
+#Slow Dance
+def slow_dance(direction, tiles_array)
+  tiles_array.each_with_index do |tile_dir, i|
+    return i if direction == tile_dir
+  end
+end
+
+tiles_hash = { up: 0,
+               right_up: 1,
+               right: 2,
+               right_down: 3,
+               down: 4,
+               left_down: 5,
+               left: 6,
+               left_up: 7 }
+
+def constant_dance(direction, tiles_hash)
+  tiles_hash[direction]
+end
