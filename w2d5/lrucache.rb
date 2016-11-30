@@ -33,6 +33,7 @@ class LRUCache
   end
 
   private
+
   # helper methods go here!
   def add_repeated_el(el)
     @cache.delete(el)
