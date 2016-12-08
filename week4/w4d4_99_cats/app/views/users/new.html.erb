@@ -5,4 +5,9 @@
   <input type="text" name="user[password]" /><br />
 
   <%= button_to 'Sign Up', users_url %>
+
+  <% content_for :footer do %>
+    <p>This is the users sign up page.</p>
+  <% end %>
+
 </form>

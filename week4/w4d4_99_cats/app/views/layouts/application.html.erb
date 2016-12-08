@@ -9,7 +9,7 @@
 <body>
   <header>
     <%= render 'shared/errors' %>
-    
+
     Hello, <%= current_user.nil? ? "Guest" : current_user.username %>
     <% if current_user.nil? %>
       <%= button_to 'Login', new_session_url, method: :get %>
@@ -18,7 +18,8 @@
     <% end %>
   </header>
 
-<%= yield %>
+  <%= yield %>
 
+  <%= yield :footer %>
 </body>
 </html>

@@ -5,4 +5,8 @@
   <input type="text" name="user[password]" id="password" /><br />
 
   <%= button_to 'Login', sessions_url %>
+
+  <% content_for :footer do %>
+    <p>This is the users log in page.</p>
+  <% end %>
 </form>
