@@ -16,4 +16,5 @@ group :development do
   gem 'spring'
   gem 'pry-rails'
   gem 'bcrypt'
+  gem 'letter_opener'
 end

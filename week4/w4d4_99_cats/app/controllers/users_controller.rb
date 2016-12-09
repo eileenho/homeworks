@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
+      msg = UserMailer.welcome_email(@user)
+      msg.deliver
       log_in(user)
       redirect_to cats_url
     else
