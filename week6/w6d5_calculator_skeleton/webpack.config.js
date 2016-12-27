@@ -1,22 +1,24 @@
 module.exports = {
+  context: __dirname,
   entry: "./app.jsx",
   output: {
-    filename: "./bundle.js"
+    path: "./",
+    filename: "bundle.js"
   },
   module: {
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
-        exclude: /(node_modules)/,
+        exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['react', 'es2015']
         }
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'source-maps',
   resolve: {
-    extensions: ["",".js", ".jsx" ]
+    extensions: ["", ".js", '.jsx']
   }
 };
